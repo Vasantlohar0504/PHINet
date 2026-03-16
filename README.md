@@ -1,119 +1,80 @@
-PHINet – Phishing Email Detection Framework 🛡️
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+# PHINet Secure
 
+![PyPI version](https://img.shields.io/pypi/v/phinet-secure)
+![Python Version](https://img.shields.io/pypi/pyversions/phinet-secure)
+![Downloads](https://img.shields.io/pypi/dm/phinet-secure)
+![License](https://img.shields.io/github/license/Vasantlohar0504/phinet-secure)
 
+PHINet Secure is a lightweight Python library designed to detect potential phishing emails by analyzing text content using machine learning and natural language processing techniques. The tool helps users identify suspicious messages and improve email security.
 
+---
 
+## Features
 
-PHINet is a Python-based phishing email detection framework designed to identify malicious emails using machine learning, feature engineering, and cybersecurity analysis techniques.
+* Detect phishing emails from raw text
+* Lightweight and easy-to-use Python API
+* Suitable for cybersecurity research and projects
+* Can be integrated into email security tools and applications
 
-The framework analyzes email content, URLs, attachments, and sender information to detect phishing attempts and classify emails as Phishing or Legitimate.
+---
 
-PHINet demonstrates how machine learning and cybersecurity techniques can be combined to build an intelligent phishing detection system.
+## Installation
 
-🚀 Project Overview
+Install the package directly from PyPI:
 
-Phishing attacks are one of the most common cybersecurity threats. Attackers use deceptive emails to steal credentials, financial information, or sensitive data.
+pip install phinet-secure
 
-PHINet addresses this problem by building a lightweight phishing detection engine that processes email data and extracts features used by machine learning models to detect suspicious patterns.
+---
 
-The project includes:
+## Example Usage
 
-• Email content analysis
-• URL risk analysis
-• Attachment risk detection
-• Feature engineering for phishing indicators
-• Machine learning classification model
-• Modular package architecture
+```python
+from phinet import detect_phishing
 
-📊 Key Features
+text = "Your bank account has been suspended. Click here to verify your information."
 
-The PHINet framework provides:
+result = detect_phishing(text)
 
-✔ Email body analysis for suspicious keywords
-✔ URL analysis to detect phishing domains
-✔ Attachment risk detection
-✔ Custom machine learning phishing classifier
-✔ Feature engineering pipeline for email data
-✔ Modular Python package design
-✔ Easy integration into security tools and pipelines
+print("Prediction:", result)
+```
 
-🛠 Technologies Used
-Technology	Purpose
-Python	Core programming language
-Pandas	Data processing
-NumPy	Numerical operations
-Scikit-learn	Machine learning model
-Transformers	NLP based email analysis
-PyTorch	Deep learning support
-Joblib	Model serialization
-⚙ Installation
+---
 
-Clone the repository
+## Project Links
 
-git clone https://github.com/Vasantlohar0504/PHINet.git
+PyPI Package:
+https://pypi.org/project/phinet-secure/
 
-Navigate to the project folder
+GitHub Repository:
+https://github.com/Vasantlohar0504/phinet-secure
 
-cd PHINet
+---
 
-Install dependencies
+## Use Cases
 
-pip install -r requirements.txt
+* Email security research
+* Cybersecurity learning projects
+* Detecting suspicious messages in applications
+* NLP and machine learning experiments
 
-Install the package locally
+---
 
-pip install -e .
-▶ Usage Example
-import pandas as pd
-from phinet import PHINetBoost, PHINetFeatureEngine
+## Tech Stack
 
-df = pd.DataFrame([{
-    "email_id": "scammer@fakebank.com",
-    "email_body": "Verify your account immediately",
-    "urls": "http://fakebank-login.com",
-    "attachments": "dangerous.zip"
-}])
+* Python
+* Machine Learning
+* Natural Language Processing
+* Packaging with setuptools
+* Publishing using Twine
 
-engine = PHINetFeatureEngine()
+---
 
-X = engine.transform(df)
+## Author
 
-model = PHINetBoost()
+Ramesh Lohar
 
-model.fit(X, [1])
+---
 
-prediction = model.predict(X)
+## License
 
-print("Phishing" if prediction[0] else "Legitimate")
-🔍 Detection Capabilities
-
-PHINet evaluates several indicators to detect phishing attempts:
-
-• Suspicious email keywords
-• Untrusted or malicious URLs
-• Risky attachment file types
-• Sender domain analysis
-• Email structure anomalies
-
-These features are combined into a machine learning classification model to predict phishing probability.
-
-🎯 Use Cases
-
-PHINet can be used for:
-• Email security systems
-• Cybersecurity research
-• Machine learning experimentation
-• Phishing detection tools
-• Educational projects in AI security
-
-
-
-👨‍💻 Author
-
-Vasant Lohar
-Python Developer | Data Analyst | Machine Learning Enthusiast
-
-GitHub
-https://github.com/Vasantlohar0504
+This project is licensed under the MIT License.

@@ -71,7 +71,7 @@ https://github.com/Vasantlohar0504/phinet-secure
 
 ## Author
 
-Ramesh Lohar
+Vasant Lohar
 
 ---
 
